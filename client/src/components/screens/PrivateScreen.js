@@ -36,9 +36,10 @@ const PrivateScreen = ({ history }) => {
   }, [history]);
 
   return error ? (
-    <span className="error-message">{error}</span>
+    <span className="error-message">Hi..{error}</span>
   ) : (
     <>
+      <h1>Hi</h1>
       <div style={{ background: "green", color: "white" }}>{privateData}</div>
       <button onClick={logoutHandler}>Logout</button>
     </>

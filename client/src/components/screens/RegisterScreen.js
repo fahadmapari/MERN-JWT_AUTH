@@ -46,7 +46,7 @@ const RegisterScreen = ({ history }) => {
         config
       );
 
-      localStorage.setItem("authToken", JSON.stringify(data.token));
+      localStorage.setItem("authToken", data.token);
 
       history.push("/");
     } catch (error) {

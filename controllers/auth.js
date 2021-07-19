@@ -49,7 +49,7 @@ exports.forgotPassword = async (req, res, next) => {
     const user = await User.findOne({ email });
     if (!user) return next(new ErrorResponse("User does not exist", 404));
 
-    const resetToken = user.getResetPasswordToken();
+    const resetToken = await user.getResetPasswordToken();
 
     await user.save();
 
